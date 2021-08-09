@@ -1,0 +1,154 @@
+<!DOCTYPE html><html>
+<head><meta charset='utf-8' name='viewport' content='width=device-width, initial-scale=1'>
+<style>html, body { font-family: Helvetica; display: block; margin: 0px; text-align: left; padding-left: 15px; background-color: rgb(37, 37, 38);}
+.button3 { background-color: #14b2b8; border: none; color: white;  width: 200px; padding: 12px 24px;  
+text-decoration: none; font-size: 20px;  cursor: pointer;}
+
+.mytext3 {font-size: 18px; font-family: 'Consolas';  text-align: right; color: rgb(253, 100, 100); }
+.mytext2 {font-size: 16px; font-family: 'Consolas';  text-align: left; color: white; }
+a { text-decoration: none; color:white }
+.div1 {background-color: rgb(20, 26, 9); position:absolute; left: 370px; width: 200px; height: auto ; padding: 10px; border-style:dotted; border-color: white;}
+.div2 {background-color: black; width: 293px; padding: 10px;  border-style:solid; border-color: white;}
+.div3 {background-color: black; width: 293px; padding: 10px;  border-style:solid; border-color: white; display: block;  text-align: center;}
+
+.button { background-color: #209e48; border: none; color: white; padding: 12px 24px;
+text-decoration: none; font-size: 20px; margin: 2px; cursor: pointer;}
+.button2 {background-color: #c20a0a; padding: 12px 28px;}
+.textbox {width: 150px; border: 1px solid #333; padding: 16px 20px; background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);}
+.mytext {font-size: 16px; font-weight:bold; font-family:Arial ; text-align: center; color: black;}
+#container3 {width: 100%; height: 100%; margin-top: 10px; margin-bottom: 10px; margin-left: 0px;  padding: 0px; display: -webkit-flex; -webkit-justify-content: center; display: flex; justify-content: center;}
+
+.container2 {
+  display: block;
+  position: relative;
+  padding-left: 0;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 50;
+  cursor: pointer;
+  transform: scale(0);
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #037428;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+        top: 9px;
+        left: 9px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+}
+</style></head>
+
+
+<body><h1 style='color:white;'>Matrix Kontrol</h1>
+  <div class='div1'>
+    <h2 style='color:rgb(74, 255, 210); text-decoration: underline;'>Durum</h2>
+  <p class='mytext3'>88/12/2021 12:34:56</p>
+  <p class='mytext3'>Pazartesi</p>
+  <p class='mytext2'>Sıcaklık: 88.88°C</p>
+  <p class='mytext2'>Nem: %88</p>
+  <p class='mytext2'>Açılma Saati: 88:88</p>
+  <p class='mytext2'>Kapanma Saati: 88:88</p>
+  <p class='mytext2'>Çalışma Zamanı: 9 Gün</p>
+  <p class='mytext2' style='color:maroon; text-decoration:underline;'>-> Gösterilecek metin:</p>
+  <p class='mytext2' style='font-family: Arial;'>metin text 123 %%</p>
+  <p class='mytext2' style='color:maroon; text-decoration:underline;'>---> Metin 2:</p>
+  <p class='mytext2' style='font-family: Arial;'>metin text 123 %%</p>
+  <pre>
+
+
+
+  </pre>
+  <div><a href='/reboot' style='display: block;' ><button class='button3'>Reset</button></a></div>
+  </div>
+
+<div class='div2'>
+    <h2 style='color:rgb(74, 255, 210); text-decoration: underline;'>Mod Seçimi</h2>
+<p><label class='container2'><a class='container' style='color:rgb(0, 150, 0)' href='/mode/1'>Saat <input type='radio'  name='radio' checked='checked'><span class='checkmark'></span></a></label></p>
+<p><label class='container2'><a class='container' href='/mode/2'>Termometre ve Nem Ölçer <input type='radio'  name='radio' ><span class='checkmark'></span></a></label></p>
+<p><label class='container2'><a class='container' href='/mode/3'>Sadece Termometre <input type='radio'  name='radio'><span class='checkmark'></span></a></label></p>
+<p><label class='container2'><a class='container' href='/mode/4'>Sadece Nem Ölçer <input type='radio'  name='radio'><span class='checkmark'></span></a></label></p>
+<p><label class='container2'><a class='container' href='/mode/5'>Saniye<input type='radio'  name='radio'><span class='checkmark'></span></a></label></p>
+<p><label class='container2'><a class='container' href='/mode/6'>Print Text <input type='radio'  name='radio'><span class='checkmark'></span></a></label></p>
+<p><label class='container2'><a class='container' href='/mode/7'>Varsayılan<input type='radio'  name='radio' ><span class='checkmark'></span></a></label></p>
+</div>
+
+<pre>
+
+</pre>
+
+<div class='div3'>
+  <div id='container3'>
+    <p></p><div class='textbox mytext'>Oto Gece Modu</div>
+    <a href='/anm/off'><button class='button button2'>ON</button></a><p></p>
+    </div>
+
+    <div id='container3'>
+      <p></p><div class='textbox mytext'>Gece Modu</div>
+      <a href='/anm/on'><button class='button '>OFF</button></a><p></p>
+      </div>
+
+    <!-- <div id='container3'>
+        <p></p><div class='textbox mytext'>Gece Modu</div>
+        <a ><button class='button button2' disabled='disabled' style='background-color:#333'>ON</button></a><p></p> -->
+        </div>
+</div>
+
+</body></html>
