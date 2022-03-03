@@ -1,7 +1,7 @@
 # smartDotMatrix
 Multi-purpose dot matrix device
-# Information
-The project has been already finished when the repository was created. However, I wanted refactor and cite the code before uplading to here. Morevover, I also wanted to add some more features and refurbish the webpage project hosts. Therefore, since I could not find a time to do these jobs, I am unable to upload the source code. I will at least try to cite the current code and upload as soon as posible.
+# Abstract
+The base code is from before the time I had realized writing readable code is important. Therefore, it is a bit unreadable. Sorry for that.
 
 ## Some pictures
 
