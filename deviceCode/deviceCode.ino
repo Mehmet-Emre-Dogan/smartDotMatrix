@@ -138,7 +138,7 @@ uint8_t degC[] = { 6, 3, 3, 56, 68, 68, 68 }; //derece sembolü
 String ttbp = "merhaba"; //text to be printed merhaba 
 String ttbp2 = "*"; //text to be printed 2
 String ttbp3 = "*"; //text to be printed 3
-char curMessage2[3][8];
+char curMessage2[4][8];
 char curMessage3[250];
 String gunler[7] = {"Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"};
 //String gunler2[7] = {"monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"};
@@ -499,17 +499,22 @@ void multi(){
           switch(shown){
           case 7:
           if (myMatrix.displayAnimate())
-            myMatrix.displayText(curMessage2[0], PA_CENTER, hiz, zaman3, efektCustom, efektGun);
+            myMatrix.displayText(curMessage2[0], PA_CENTER, hiz, zaman3, PA_SCROLL_LEFT, PA_SCROLL_RIGHT);
           break;
   
           case 8:
           if (myMatrix.displayAnimate())
-            myMatrix.displayText(curMessage2[1], PA_CENTER, hiz, zaman3, efektGun, efektCustom);
+            myMatrix.displayText(curMessage2[1], PA_CENTER, hiz, zaman3, PA_SCROLL_RIGHT, PA_SCROLL_LEFT);
           break;
   
           case 9:
           if (myMatrix.displayAnimate())
-            myMatrix.displayText(curMessage2[2], PA_RIGHT, hiz, zaman3, PA_BLINDS, PA_BLINDS);
+            myMatrix.displayText(curMessage2[2], PA_RIGHT, hiz, zaman3, PA_SCROLL_LEFT, PA_SCROLL_RIGHT);
+          break;
+
+          case 10:
+          if (myMatrix.displayAnimate())
+            myMatrix.displayText(curMessage2[3], PA_RIGHT, hiz, zaman3, PA_BLINDS, PA_BLINDS);
           break;
   
           default:
@@ -519,7 +524,7 @@ void multi(){
 
       if(!ttbp3.equals("*")){
         switch(shown){
-        case 10:
+        case 11:
         ttbp3.toCharArray(curMessage3, 250);
         utf8Ascii(curMessage3); 
         myMatrix.displayScroll(curMessage3, PA_LEFT, PA_SCROLL_LEFT, hiz);
@@ -532,7 +537,7 @@ void multi(){
 
      }
      shown++;
-     shown %= 11;
+     shown %= 12;
   }
 }
 
@@ -549,7 +554,7 @@ if( millis() - pct3 >= clrInt3 ){
 }
 
 void parseTtbp2(){
-  String str0, str1, str2;
+  String str0, str1, str2, str3;
   //bool flag0 = false, flag1 = false, flag2 = false; //hepsi yerine sadece bazılarının gelmesi durmunu ele alacak olursam lazım olacak if flagN --> strtochararray[n]
   String box =  ttbp2 + '!';
   for(int i = 0; box[i] != '!'; i++){
@@ -566,12 +571,18 @@ void parseTtbp2(){
           str1 += box[j];      
         }
         break;
-        
-        case 'h':
+
+        case 'e':
         for(int j = i+2; box[j] != '?'; j++){
           str2 += box[j];      
         }
-        str2 += '$';
+        break;
+        
+        case 'h':
+        for(int j = i+2; box[j] != '?'; j++){
+          str3 += box[j];      
+        }
+        str3 += '$';
         break;
 
         default:
@@ -583,6 +594,7 @@ void parseTtbp2(){
   str0.toCharArray(curMessage2[0], 8);
   str1.toCharArray(curMessage2[1], 8);
   str2.toCharArray(curMessage2[2], 8);
+  str3.toCharArray(curMessage2[3], 8);
 }
 
 
