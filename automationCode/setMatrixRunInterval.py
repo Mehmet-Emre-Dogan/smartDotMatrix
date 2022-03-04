@@ -1,0 +1,11 @@
+import requests
+altH = int(input("Kapanma saatini giriniz:\n--> "))
+altM = int(input("Kapanma dakikasını giriniz:\n--> "))
+ustH = int(input("Açılma saatini giriniz:\n--> "))
+ustM = int(input("Açılma dakikasını giriniz:\n--> "))
+requests.get(f"http://192.168.1.102/a/h/?{altH}?")
+requests.get(f"http://192.168.1.102/a/m/?{altM}?")
+requests.get(f"http://192.168.1.102/u/h/?{ustH}?")
+requests.get(f"http://192.168.1.102/u/m/?{ustM}?")
+print("Ayarlandı!")
+cop = input("Çıkış için esc ya da enter")
