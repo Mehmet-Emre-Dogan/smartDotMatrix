@@ -1,6 +1,8 @@
 # smartDotMatrix
 Multi-purpose dot matrix device
+
 [Video](https://youtu.be/Hd10FrcIJx4)
+
 # Abstract
 8x8x4 ESP8266 powered MAX72xx dot-matrix smart clock. Controllable with web interface via LAN and infrared remote controller.
 
