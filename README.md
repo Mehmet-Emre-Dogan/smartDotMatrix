@@ -37,9 +37,9 @@ The base code is from before I realized writing readable code is essential. Ther
 # References
 - https://maker.robotistan.com/dot-matrix-arduino-saat/
 - https://randomnerdtutorials.com/esp8266-ota-updates-with-arduino-ide-over-the-air/
- --> External EEPROM reading-writing functions:
+ --> External EEPROM reading-writing functions:<br>
 - https://dronebotworkshop.com/eeprom-arduino/
 - https://arduino-projects4u.com/arduino-24c16/
- --> Webpage UI designs:
+ --> Webpage UI designs: <br>
 - https://mytectutor.com/esp8266-nodemcu-relay-control-from-web-page-over-wifi/
 - https://www.w3schools.com/howto/howto_css_custom_checkbox.asp
